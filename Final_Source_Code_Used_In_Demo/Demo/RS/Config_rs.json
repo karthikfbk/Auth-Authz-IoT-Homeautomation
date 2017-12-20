@@ -1,0 +1,74 @@
+{
+	"keystorelocation": "keyStoreRS.jks",
+	"keystorepass": "endPassrs",
+	"truststorelocation": "trustStoreRS.jks",
+	"truststorepass": "rootPassrs",
+	"alias": "server",
+	"root": "baseroot2",
+	"name": "C=CA,L=Ottawa,O=Eclipse,OU=Californium,CN=server",
+	"connectendpoint":"coaps://192.168.0.111:5684/connect",
+	"tokenendpoint": "coaps://192.168.0.111:5684/token",
+	"RESOURCES": [
+		{
+			"name": "HueLighting",
+			"path": "light_living",
+			"rules": [
+				{
+					"scope": "rw_light_living",
+					"actions": [
+						"GET",
+						"PUT"
+					]
+				},
+				{
+					"scope": "r_light_living",
+					"actions": [
+						"GET"
+					]
+				},
+				{
+					"scope": "w_light_living",
+					"actions": [
+						"PUT"
+					]
+				}
+			]
+		},
+		{
+			"name": "HueLighting",
+			"path": "light_kitchen",
+			"rules": [
+				{
+					"scope": "rw_light_kitchen",
+					"actions": [
+						"GET",
+						"PUT"
+					]
+				},
+				{
+					"scope": "r_light_kitchen",
+					"actions": [
+						"GET"
+					]
+				},
+				{
+					"scope": "w_light_kitchen",
+					"actions": [
+						"PUT"
+					]
+				}
+			]
+		}
+	],
+	"ISSUER": 
+		{
+			"name": "C=CA,L=Ottawa,O=Eclipse,OU=Californium,CN=as",
+			"alias":"as",
+			"cose_param": {
+				"messagetag": "ENCRYPT0",
+				"algorithmid": "AES_GCM_256",
+				"skey":"wBRDjVpQgjGUPDUkp67aSyDuN8ZSVjjFG/Svb68/Uio=",
+				"keywrapid":"Direct"
+			}
+		}	
+}

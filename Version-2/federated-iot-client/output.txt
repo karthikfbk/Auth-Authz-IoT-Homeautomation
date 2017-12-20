@@ -1,0 +1,29 @@
+******************************************************************
+<<<<<Discover_AS>>>>>
+config_endpoint:coaps://192.168.0.100:5684/config
+as_security_profile:coap_dtls_rpk
+******************************************************************
+<<<<<Fetch_AS_Config>>>>>
+token_endpoint_auth_method:[client_secret_post]
+cose_key:piJYIOwvOqbCn9Y27qy0B0S/3kzWbpFNYB3TKyyxLD8M+bRNI1ghAP29FwcTTFYTuhOwsHFIm/AYSj1n7+d7e6XBwimlqmRmAyYBAiFYINAg1LOtAvTR9V7DM/4fGS+cIhsZAZ6cPCHkVP8+NoCqIAE=
+introspection_endpoint:coaps://192.168.0.100:5684/introspection
+introspection_endpoint_auth_method:[client_secret_post]
+token_endpoint:coaps://192.168.0.100:5684/token
+authorization_mode:ascas
+grant_type_supported:[authorization_code, client_credentials]
+issuer:thesis.federatediot.as
+client_count:0
+query_endpoint:coaps://192.168.0.100:5684/query
+registration_endpoint:coaps://192.168.0.100:5684/registration
+******************************************************************
+<<<<<Client_Registration>>>>>
+scope:[ra_r_sensor1, ra_rw_huelight]
+client_id:ClientABC3fd7198f07df69be
+cose_key:piJYIHB14n5xjMOQdTADTqedn8+vo+TFjPXbE3+gM2R1OPQuI1ggWVE11j75fvgIuNzg0tw1xTaui1kSjFg1j0JryL0qV7ADJgECIVgg0JazqHBy/Oc7w5Cd9SJBYitqn1WZEWpEBDi0pxn5ZGggAQ==
+client_name:ClientABC
+token_endpoint_auth_method:client_secret_post
+grant_type:[client_credentials]
+client_secret:3fe22ae076ea0ae3
+client_role:[resource_access]
+client_security_profile:coap_dtls_rpk
+

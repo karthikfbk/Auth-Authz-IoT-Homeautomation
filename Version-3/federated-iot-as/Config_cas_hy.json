@@ -1,0 +1,24 @@
+{
+	"keystorelocation": "keyStoreCAS.jks",
+	"keystorepass": "endPasscas",
+	"truststorelocation": "trustStoreCAS.jks",
+	"truststorepass": "rootPasscas",
+	"alias": "cas",
+	"root": "baseroot1",
+	"name": "C=CA,L=Ottawa,O=Eclipse,OU=Californium,CN=cas",
+	"CLIENTS": [
+		{
+			"name": "ni:///sha-256;PLGQlIe0V0nnKzT0dhYipvI82anCkkrQQ39JMcWgLnU",
+			"profiles": [
+				"asy_dtls_cert"
+			],
+			"keytypes": [
+				"PSK"
+			],
+			"skey": "mTfledcyZu34tg69NNdixl21XsQv/XpewnCqQJbl+sI="
+		}
+	],
+	"PARTNER_ALIAS": { "root_alias": "baseroot2",
+						"distinguished_name": "C=CA,L=Ottawa,O=Eclipse,OU=Californium,CN=as",
+						"alias_name": "as" }
+}

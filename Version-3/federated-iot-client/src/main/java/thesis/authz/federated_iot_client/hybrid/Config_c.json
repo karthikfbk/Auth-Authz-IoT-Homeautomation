@@ -1,0 +1,27 @@
+{
+	"truststorelocation": "trustStoreC.jks",
+	"truststorepass": "rootPassc",
+	"root": "baseroot1",
+	"name": "C=CA,L=Ottawa,O=Eclipse,OU=Californium,CN=client",
+	"cas_name":"C=CA,L=Ottawa,O=Eclipse,OU=Californium,CN=cas",
+	"client_asykey" : "piJYID3wNzDARxTDDnjAmS3godAjPfsGQk80Tus1q/teqexAI1ggfpHm5pXd5UuKSN9Q/GCf5AcUmi2eMTIAlWF3I4mZb8sDJgECIVggaC6Q0VxRuEvK3lAoNK2kfbjL6b66hqwDvJpv0QKFbAAgAQ==",
+	"rsaddress": "coap://localhost:5683",
+	"CONNECT_REQUEST": {
+		"execute":true,
+		"uri":"coaps://localhost:5684/query"
+	},
+	"QUERY_REQUEST": {
+		"execute": true,
+		"uri": "coaps://localhost:5684/query"
+	},
+	"ACCESS_TOKEN_REQUEST": {
+		"execute": true,
+		"uri": "coaps://localhost:5685/Token_ma"
+	},
+	"authz_info_uri":"coap://localhost:5682/authz-info",
+	"RESOURCES_ACCESS_REQUEST": {
+		"execute": true,
+		"resource": "coaps://localhost:5686/light_living",
+		"method": "GET"
+	}
+}

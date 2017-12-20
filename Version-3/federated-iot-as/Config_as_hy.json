@@ -1,0 +1,54 @@
+{
+	"keystorelocation": "keyStoreAS.jks",
+	"keystorepass": "endPassas",
+	"truststorelocation": "trustStoreAS.jks",
+	"truststorepass": "rootPassas",
+	"alias": "as",
+	"root": "baseroot2",
+	"name": "C=CA,L=Ottawa,O=Eclipse,OU=Californium,CN=as",
+	"RSS": [
+		{
+			"name": "C=CA,L=Ottawa,O=Eclipse,OU=Californium,CN=server",
+			"uri":"coaps://localhost:5686/",
+			"profiles": [
+				"asy_dtls_cert"
+			],
+			"scopes": [
+				"rw_light_living",
+				"r_light_living",
+				"w_light_living",				
+				"rw_light_kitchen",
+				"r_light_kitchen",
+				"w_light_kitchen"
+			],
+			"keytypes": [
+				"PSK"
+			],
+			"tokentypes": [
+				"CWT"
+			],
+			"cose_param": [
+				"ENCRYPT0",
+				"AES_GCM_256",
+				"Direct"
+			],
+			"expiration": 30000,
+			"skey": "wBRDjVpQgjGUPDUkp67aSyDuN8ZSVjjFG/Svb68/Uio="
+		}
+	],
+	"ADDACCESS": [
+		{
+			"client": "ni:///sha-256;PLGQlIe0V0nnKzT0dhYipvI82anCkkrQQ39JMcWgLnU",
+			"server": "C=CA,L=Ottawa,O=Eclipse,OU=Californium,CN=server",
+			"scope": "rw_light_living"
+		},
+		{
+			"client": "ni:///sha-256;PLGQlIe0V0nnKzT0dhYipvI82anCkkrQQ39JMcWgLnU",
+			"server": "C=CA,L=Ottawa,O=Eclipse,OU=Californium,CN=server",
+			"scope": "r_light_kitchen"
+		}
+	],
+	"PARTNER_ALIAS": { "root_alias": "baseroot1",
+						"distinguished_name": "C=CA,L=Ottawa,O=Eclipse,OU=Californium,CN=cas",
+						"alias_name": "cas" }
+}

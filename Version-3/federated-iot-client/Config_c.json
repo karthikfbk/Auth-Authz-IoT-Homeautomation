@@ -1,0 +1,28 @@
+{
+	"keystorelocation": "keyStoreC.jks",
+	"keystorepass": "endPassc",
+	"truststorelocation": "trustStoreC.jks",
+	"truststorepass": "rootPassc",
+	"alias": "client",
+	"root": "baseroot1",
+	"name": "C=CA,L=Ottawa,O=Eclipse,OU=Californium,CN=client",
+	"rsaddress": "coap://localhost:5683",
+	"CONNECT_REQUEST": {
+		"execute":true,
+		"uri":"coaps://localhost:5684/query"
+	},
+	"QUERY_REQUEST": {
+		"execute": true,
+		"uri": "coaps://localhost:5684/query"
+	},
+	"ACCESS_TOKEN_REQUEST": {
+		"execute": true,
+		"uri": "coaps://localhost:5685/Token_ma"
+	},
+	"authz_info_uri":"coaps://localhost:5686/authz-info",
+	"RESOURCES_ACCESS_REQUEST": {
+		"execute": true,
+		"resource": "coaps://localhost:5686/light_living",
+		"method": "GET"
+	}
+}

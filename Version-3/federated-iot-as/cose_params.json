@@ -1,0 +1,8 @@
+{
+	"as": {
+		"sign1": {
+			"cose_signkey": "piJYIPF1y1iFPO2qTjfxCDf8axtxem7G08VIzlg3WFKMMYXnI1ghAK65TJ3he+7b65cC8tmaASamhGrN7KNLsAv4lonKuKsYAyYBAiFYIENdUxf3L2Zh5kZrUtElj0STbm2UhMsrzmm66QVD4iRJIAE=",
+			"cose_verifykey": "pSJYIPF1y1iFPO2qTjfxCDf8axtxem7G08VIzlg3WFKMMYXnAyYhWCBDXVMX9y9mYeZGa1LRJY9Ek25tlITLK85puukFQ+IkSQECIAE="
+		}
+	}
+}

@@ -1,0 +1,37 @@
+{
+	"keystorelocation": "keyStoreCAS.jks",
+	"keystorepass": "endPasscas",
+	"truststorelocation": "trustStoreCAS.jks",
+	"truststorepass": "rootPasscas",
+	"alias": "cas",
+	"root": "baseroot1",
+	"name": "C=CA,L=Ottawa,O=Eclipse,OU=Californium,CN=cas",
+	"CLIENTS": [
+		{
+			"name": "C=CA,L=Ottawa,O=Eclipse,OU=Californium,CN=client",
+			"profiles": [
+				"asy_dtls_cert"
+			],
+			"keytypes": [
+				"PSK"
+			],
+			"skey": "mTfledcyZu34tg69NNdixl21XsQv/XpewnCqQJbl+sI="
+		}
+	],
+	"ADDTOKENACCESS": [
+		"C=CA,L=Ottawa,O=Eclipse,OU=Californium,CN=client"
+	],
+	"PARTNERS": [
+		{
+			"as": {
+				"sign1": {
+					"cose_signkey": "piJYID3wNzDARxTDDnjAmS3godAjPfsGQk80Tus1q/teqexAI1ggfpHm5pXd5UuKSN9Q/GCf5AcUmi2eMTIAlWF3I4mZb8sDJgECIVggaC6Q0VxRuEvK3lAoNK2kfbjL6b66hqwDvJpv0QKFbAAgAQ==",
+					"cose_verifykey": "pSJYIPF1y1iFPO2qTjfxCDf8axtxem7G08VIzlg3WFKMMYXnAyYhWCBDXVMX9y9mYeZGa1LRJY9Ek25tlITLK85puukFQ+IkSQECIAE="
+				}
+			}
+		}
+	],
+	"PARTNER_ALIAS": { "root_alias": "baseroot2",
+						"distinguished_name": "C=CA,L=Ottawa,O=Eclipse,OU=Californium,CN=as",
+						"alias_name": "as" }
+}

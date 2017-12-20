@@ -1,0 +1,13 @@
+{
+	"dbip" : "localhost",
+	"keystorelocation": "keyStoreCAS.jks",
+	"keystorepass": "endPasscas",
+	"truststorelocation": "trustStoreCAS.jks",
+	"truststorepass": "rootPasscas",
+	"alias": "cas",
+	"root": "baseroot1",
+	"name": "C=CA,L=Ottawa,O=Eclipse,OU=Californium,CN=cas",
+	"PARTNER_ALIAS": { "root_alias": "baseroot2",
+						"distinguished_name": "C=CA,L=Ottawa,O=Eclipse,OU=Californium,CN=as",
+						"alias_name": "as" }
+}

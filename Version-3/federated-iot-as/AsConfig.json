@@ -1,0 +1,37 @@
+{
+	"comment0": "Mention the configurations of the Authorization Server",
+	"startup": {		
+		"multicast_discovery": false,
+		"as_security_profile": "coap_dtls_rpk"
+	},
+	"comment1": "Specify the metadata of the AS",
+	"metadata": {
+		"issuer": "thesis.federatediot.as",
+		
+		"comment0": "Specify the authorization mode for the AS.",
+		"comment1": "as --> authorization server",
+		"comment2": "cas --> client authorization server",
+		"comment3": "ascas --> both authorization server and client authorization server",
+		"authorization_mode": "ascas",
+		
+		"token_endpoint": {"protocol": "coaps", "port": 5684, "interface": "wlan1", "path": "/token"},
+		"query_endpoint": {"protocol": "coaps", "port": 5684, "interface": "wlan1", "path": "/query"},
+		"config_endpoint": {"protocol": "coaps", "port": 5684, "interface": "wlan1", "path": "/config"},
+		"registration_endpoint": {"protocol": "coaps", "port": 5684, "interface": "wlan1", "path": "/registration"},
+		"grant_type_supported": ["client_credentials","authorization_code"],
+		"token_endpoint_auth_method": ["client_secret_post"],
+		"introspection_endpoint": {"protocol": "coaps", "port": 5684, "interface": "wlan1", "path": "/introspection"},
+		"introspection_endpoint_auth_method": ["client_secret_post"],
+		
+		"comment4": "This is the Base64 encoded string of asymmetric OneKey",
+		"cose_key": "piJYIOwvOqbCn9Y27qy0B0S/3kzWbpFNYB3TKyyxLD8M+bRNI1ghAP29FwcTTFYTuhOwsHFIm/AYSj1n7+d7e6XBwimlqmRmAyYBAiFYINAg1LOtAvTR9V7DM/4fGS+cIhsZAZ6cPCHkVP8+NoCqIAE=",
+		
+		"client_count": 0
+	},
+	"database": {
+		"db_endpoint": {"protocol": "jdbc:mysql", "port": 3306, "host": "localhost"},
+		"root_pwd": "raspberry",
+		"user_name": "thesis.federatediot.as",
+		"user_pwd" : "password"
+	}
+}

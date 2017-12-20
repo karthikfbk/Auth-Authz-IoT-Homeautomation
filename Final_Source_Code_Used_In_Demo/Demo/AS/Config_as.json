@@ -1,0 +1,75 @@
+{
+	"dbip" : "localhost",
+	"keystorelocation": "keyStoreAS.jks",
+	"keystorepass": "endPassas",
+	"truststorelocation": "trustStoreAS.jks",
+	"truststorepass": "rootPassas",
+	"alias": "as",
+	"root": "baseroot2",
+	"name": "C=CA,L=Ottawa,O=Eclipse,OU=Californium,CN=as",
+	"RSS": [
+		{
+			"name": "C=CA,L=Ottawa,O=Eclipse,OU=Californium,CN=server",
+			"uri":"coaps://192.168.0.113:5684/update",
+			"profiles": [
+				"asymmetric","hybrid"
+			],
+			"scopes": [
+				"rw_light_living",
+				"r_light_living",
+				"w_light_living",				
+				"rw_light_kitchen",
+				"r_light_kitchen",
+				"w_light_kitchen"
+			],
+			"keytypes": [
+				"PSK"
+			],
+			"tokentypes": [
+				"CWT"
+			],
+			"cose_param": [
+				"ENCRYPT0",
+				"AES_GCM_256",
+				"Direct"
+			],
+			"expiration": 30000,
+			"skey": "wBRDjVpQgjGUPDUkp67aSyDuN8ZSVjjFG/Svb68/Uio="
+		}
+	],
+	"ADDACCESS": [
+		{
+			"client": "C=CA,L=Ottawa,O=Eclipse,OU=Californium,CN=client",
+			"server": "C=CA,L=Ottawa,O=Eclipse,OU=Californium,CN=server",
+			"scope": "rw_light_living"
+		},
+		{
+			"client": "C=CA,L=Ottawa,O=Eclipse,OU=Californium,CN=client",
+			"server": "C=CA,L=Ottawa,O=Eclipse,OU=Californium,CN=server",
+			"scope": "rw_light_kitchen"
+		},
+		{
+			"client": "ni:///sha-256;PLGQlIe0V0nnKzT0dhYipvI82anCkkrQQ39JMcWgLnU",
+			"server": "C=CA,L=Ottawa,O=Eclipse,OU=Californium,CN=server",
+			"scope": "rw_light_living"
+		},
+		{
+			"client": "ni:///sha-256;PLGQlIe0V0nnKzT0dhYipvI82anCkkrQQ39JMcWgLnU",
+			"server": "C=CA,L=Ottawa,O=Eclipse,OU=Californium,CN=server",
+			"scope": "r_light_kitchen"
+		}
+	],
+	"PARTNERSx": [
+		{
+			"cas": {
+				"sign1": {
+					"cose_signkey": "piJYIPF1y1iFPO2qTjfxCDf8axtxem7G08VIzlg3WFKMMYXnI1ghAK65TJ3he+7b65cC8tmaASamhGrN7KNLsAv4lonKuKsYAyYBAiFYIENdUxf3L2Zh5kZrUtElj0STbm2UhMsrzmm66QVD4iRJIAE=",
+					"cose_verifykey": "pSJYID3wNzDARxTDDnjAmS3godAjPfsGQk80Tus1q/teqexAAyYhWCBoLpDRXFG4S8reUCg0raR9uMvpvrqGrAO8mm/RAoVsAAECIAE="
+				}
+			}
+		}
+	],
+	"PARTNER_ALIAS": { "root_alias": "baseroot1",
+						"distinguished_name": "C=CA,L=Ottawa,O=Eclipse,OU=Californium,CN=cas",
+						"alias_name": "cas" }
+}
